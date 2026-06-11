@@ -1,97 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>WSC Portafolio</title>
+    <title>Werner Sebald · Desarrollo para e-commerce Shopify y Mercado Libre</title>
     <script src="https://kit.fontawesome.com/69d87b968e.js" crossorigin="anonymous"></script>
-    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0c1410;
+            --paper: #f7f5f0;
+            --emerald: #0f9d6c;
+            --emerald-deep: #0a6b4a;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .font-display { font-family: 'Sora', system-ui, sans-serif; }
+        ::selection { background: #0f9d6c; color: #fff; }
+        .grain { background-image: radial-gradient(rgba(12,20,16,0.04) 1px, transparent 1px); background-size: 18px 18px; }
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+            .reveal.in { opacity: 1; transform: none; }
+        }
+    </style>
 </head>
 
-<body class="ring-offset-pink-500">
-    
-    <header> 
-        <nav>
-           <a href="index.html">Home</a>
-           <!-- <a href="social.html">Social Activities</a>
-            <a href="personal.html">About Me</a> 
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>-->
+<body class="bg-[#f7f5f0] text-[#0c1410] antialiased grain">
+
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#f7f5f0]/80 border-b border-[#0c1410]/10">
+        <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#top" class="font-display font-extrabold text-lg tracking-tight flex items-center gap-2">
+                <span class="inline-grid place-items-center w-7 h-7 rounded-md bg-[#0f9d6c] text-white text-sm">W</span>
+                Werner Sebald
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-[#0c1410]/70">
+                <a href="#about" class="hover:text-[#0a6b4a] transition">Sobre mí</a>
+                <a href="#projects" class="hover:text-[#0a6b4a] transition">Proyectos</a>
+                <a href="#stack" class="hover:text-[#0a6b4a] transition">Tecnologías</a>
+                <a href="#education" class="hover:text-[#0a6b4a] transition">Formación</a>
+            </div>
+            <a href="#contact" class="text-sm font-semibold px-4 py-2 rounded-lg bg-[#0c1410] text-[#f7f5f0] hover:bg-[#0a6b4a] transition">Hablemos</a>
         </nav>
     </header>
-    <main>
-    <h1>About Me</h1>
 
+    <main id="top">
 
+        <!-- HERO -->
+        <section class="max-w-5xl mx-auto px-6 pt-20 pb-24">
+            <p class="reveal inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#0a6b4a] mb-6">
+                <span class="w-8 h-px bg-[#0a6b4a]"></span>
+                Desarrollo para e-commerce
+            </p>
+            <h1 class="reveal font-display font-extrabold tracking-tight text-4xl sm:text-6xl leading-[1.05] max-w-3xl">
+                Hago que tu tienda <span class="text-[#0f9d6c]">venda más</span>, uniendo lo técnico con tu negocio.
+            </h1>
+            <p class="reveal mt-6 text-lg text-[#0c1410]/70 max-w-2xl leading-relaxed">
+                Soy ingeniero de software enfocado en <strong class="font-semibold text-[#0c1410]">Shopify y Mercado Libre</strong>. Antes de escribir una línea de código, entiendo qué hace crecer tu negocio — y luego lo construyo.
+            </p>
+            <div class="reveal mt-9 flex flex-wrap gap-3">
+                <a href="#contact" class="px-6 py-3 rounded-lg bg-[#0f9d6c] text-white font-semibold hover:bg-[#0a6b4a] transition shadow-sm">
+                    Hablemos de tu proyecto
+                </a>
+                <a href="#projects" class="px-6 py-3 rounded-lg border border-[#0c1410]/15 font-semibold hover:border-[#0a6b4a] hover:text-[#0a6b4a] transition">
+                    Ver proyectos
+                </a>
+            </div>
+        </section>
 
-    <!--
-    How am I? 
-    What I build?
-    Where I am going?
-    -->
-    <p>I’m a software engineer focused on full-stack development. 
-    I’m currently strengthening my foundations in software engineering, clean code, databases, and professional communication. 
-    My goal is to build practical tools and educational projects that help people use technology to improve their daily lives. </p>
+        <!-- VALUE STRIP -->
+        <section class="border-y border-[#0c1410]/10 bg-[#0c1410] text-[#f7f5f0]">
+            <div class="max-w-5xl mx-auto px-6 py-10 grid sm:grid-cols-3 gap-8">
+                <div class="reveal">
+                    <i class="fa-solid fa-magnifying-glass-chart text-[#0f9d6c] text-xl mb-3"></i>
+                    <h3 class="font-display font-semibold mb-1">Entiendo el negocio</h3>
+                    <p class="text-sm text-[#f7f5f0]/60">Empiezo por tu cliente y tu venta, no por la tecnología.</p>
+                </div>
+                <div class="reveal">
+                    <i class="fa-solid fa-code text-[#0f9d6c] text-xl mb-3"></i>
+                    <h3 class="font-display font-semibold mb-1">Ejecuto con criterio</h3>
+                    <p class="text-sm text-[#f7f5f0]/60">Código limpio y bases sólidas de ingeniería de software.</p>
+                </div>
+                <div class="reveal">
+                    <i class="fa-solid fa-comments text-[#0f9d6c] text-xl mb-3"></i>
+                    <h3 class="font-display font-semibold mb-1">Comunico claro</h3>
+                    <p class="text-sm text-[#f7f5f0]/60">Te explico en tu idioma, sin tecnicismos innecesarios.</p>
+                </div>
+            </div>
+        </section>
 
-    <h2>Technologies</h2>
+        <!-- ABOUT -->
+        <section id="about" class="max-w-5xl mx-auto px-6 py-24">
+            <div class="grid md:grid-cols-[1fr_1.4fr] gap-12 items-start">
+                <div class="reveal">
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#0a6b4a] mb-3">Sobre mí</p>
+                    <h2 class="font-display font-bold text-3xl tracking-tight">El negocio primero,<br>el código después.</h2>
+                </div>
+                <div class="reveal space-y-4 text-[#0c1410]/75 leading-relaxed text-lg">
+                    <p>
+                        Soy ingeniero de software full-stack. Estoy fortaleciendo mis bases en ingeniería de software, código limpio, bases de datos y comunicación profesional — con un objetivo concreto: ayudar a tiendas online a vender mejor.
+                    </p>
+                    <p>
+                        Me interesa especialmente el e-commerce sobre <strong class="text-[#0c1410] font-semibold">Shopify</strong> y <strong class="text-[#0c1410] font-semibold">Mercado Libre</strong>, donde un detalle técnico bien resuelto puede significar más conversiones y menos carritos abandonados.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <ul> 
-        
-        <li>HTML</li>
-       
-        <li>CSS</li>
-        
-        <li>Javascript</li>
-       
-        <li>Typescript</li>
-       
-        <li>GitHub</li>
-        
-        <li>SQL</li>
-        
-        <li>PostgresSQL</li>
+        <!-- PROJECTS -->
+        <section id="projects" class="bg-white/60 border-y border-[#0c1410]/10">
+            <div class="max-w-5xl mx-auto px-6 py-24">
+                <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-[#0a6b4a] mb-3">Proyectos</p>
+                <h2 class="reveal font-display font-bold text-3xl tracking-tight mb-12">Cosas que he construido</h2>
 
-        <li>Prompting</li>
-    </ul>
-    <!--
-     <img src="images/HTML5.png" alt="Javascript">
-    <p>HTML</p>
-     <img src="images/css.png" alt="css">
-    <p>CSS</p>
-    <img src="images/github.png" alt="github">
-    <p>GitHub</p>
-    <img src="images/javascript.jpg" alt="Javascript">
-    <p> Javascript</p>
-    <img src="images/Typescript.svg.png" alt="Typescript">
-    <p> Typescript</p>
-    <img src="images/sql.png" alt="SQL">
-    <p> SQL</p>
-    <img src="images/Pg_logo.png" alt="PostgresSQL">
-    <p> PostgresSQL</p>
-    <img src="images/prompt.png" alt="Prompting">
-    <p>Prompting</p>
-    -->
-    <h2>Proyects</h2>
-    <i class="fa-solid fa-code"></i>
-    <p>Nova</p>
-    <p>HackerRank</p>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <!-- Card -->
+                    <article class="reveal group p-7 rounded-2xl bg-[#f7f5f0] border border-[#0c1410]/10 hover:border-[#0f9d6c] hover:shadow-lg transition">
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="inline-grid place-items-center w-11 h-11 rounded-xl bg-[#0f9d6c]/10 text-[#0a6b4a]">
+                                <i class="fa-solid fa-code text-lg"></i>
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[#0c1410]/20 group-hover:text-[#0a6b4a] transition"></i>
+                        </div>
+                        <h3 class="font-display font-semibold text-xl mb-2">Nova</h3>
+                        <p class="text-[#0c1410]/65 text-sm leading-relaxed">Proyecto de desarrollo donde apliqué fundamentos de ingeniería de software y código limpio de principio a fin.</p>
+                    </article>
 
+                    <!-- Card -->
+                    <article class="reveal group p-7 rounded-2xl bg-[#f7f5f0] border border-[#0c1410]/10 hover:border-[#0f9d6c] hover:shadow-lg transition">
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="inline-grid place-items-center w-11 h-11 rounded-xl bg-[#0f9d6c]/10 text-[#0a6b4a]">
+                                <i class="fa-solid fa-trophy text-lg"></i>
+                            </span>
+                            <a href="https://www.hackerrank.com/profile/werner_sebald_c" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[#0c1410]/20 group-hover:text-[#0a6b4a] transition"></i>
+                            </a>
+                        </div>
+                        <h3 class="font-display font-semibold text-xl mb-2">HackerRank</h3>
+                        <p class="text-[#0c1410]/65 text-sm leading-relaxed">Resolución continua de retos de algoritmos y estructuras de datos para mantener afiladas mis bases de programación.</p>
+                    </article>
+                </div>
 
-    <h2>Ideas</h2>
-    <p>IA doesn't replace the bases.</p>
+                <p class="reveal mt-8 text-sm text-[#0c1410]/50">
+                    <i class="fa-solid fa-lightbulb text-[#0f9d6c] mr-1"></i>
+                    Tip para captar clientes: cuando tengas un proyecto real de e-commerce, descríbelo como <em>problema → qué hiciste → resultado</em>. Ej: "Optimicé el checkout de una tienda Shopify y reduje el abandono un 25%."
+                </p>
+            </div>
+        </section>
 
-    <h2>Contact</h2>
-    <a href="https://www.linkedin.com/in/werner-sebald-cortez-50195a221/">Linkedin</a>
-    <a href="https://www.hackerrank.com/profile/werner_sebald_c">HackerRank</a>
-    <a href="https://github.com/SrSebald">GitHub</a>
-    <a href="mailto:werner.sebald.c@gmail.com">Email</a>
+        <!-- STACK -->
+        <section id="stack" class="max-w-5xl mx-auto px-6 py-24">
+            <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-[#0a6b4a] mb-3">Tecnologías</p>
+            <h2 class="reveal font-display font-bold text-3xl tracking-tight mb-10">Con lo que trabajo</h2>
+            <ul class="reveal flex flex-wrap gap-3">
+                <li class="px-4 py-2 rounded-lg bg-white border border-[#0c1410]/10 font-medium text-sm hover:border-[#0f9d6c] hover:text-[#0a6b4a] transition"><i class="fa-brands fa-html5 mr-2 text-[#0a6b4a]"></i>HTML</li>
+                <li class="px-4 py-2 rounded-lg bg-white border border-[#0c1410]/10 font-medium text-sm hover:border-[#0f9d6c] hover:text-[#0a6b4a] transition"><i class="fa-brands fa-css3-alt mr-2 text-[#0a6b4a]"></i>CSS</li>
+                <li class="px-4 py-2 rounded-lg bg-white border border-[#0c1410]/10 font-medium text-sm hover:border-[#0f9d6c] hover:text-[#0a6b4a] transition"><i class="fa-brands fa-js mr-2 text-[#0a6b4a]"></i>JavaScript</li>
+                <li class="px-4 py-2 rounded-lg bg-white border border-[#0c1410]/10 font-medium text-sm hover:border-[#0f9d6c] hover:text-[#0a6b4a] transition"><i class="fa-solid fa-t mr-2 text-[#0a6b4a]"></i>TypeScript</li>
+                <li class="px-4 py-2 rounded-lg bg-white border border-[#0c1410]/10 font-medium text-sm hover:border-[#0f9d6c] hover:text-[#0a6b4a] transition"><i class="fa-brands fa-github mr-2 text-[#0a6b4a]"></i>GitHub</li>
+                <li class="px-4 py-2 rounded-lg bg-white border border-[#0c1410]/10 font-medium text-sm hover:border-[#0f9d6c] hover:text-[#0a6b4a] transition"><i class="fa-solid fa-database mr-2 text-[#0a6b4a]"></i>SQL</li>
+                <li class="px-4 py-2 rounded-lg bg-white border border-[#0c1410]/10 font-medium text-sm hover:border-[#0f9d6c] hover:text-[#0a6b4a] transition"><i class="fa-solid fa-database mr-2 text-[#0a6b4a]"></i>PostgreSQL</li>
+                <li class="px-4 py-2 rounded-lg bg-white border border-[#0c1410]/10 font-medium text-sm hover:border-[#0f9d6c] hover:text-[#0a6b4a] transition"><i class="fa-solid fa-wand-magic-sparkles mr-2 text-[#0a6b4a]"></i>Prompting</li>
+            </ul>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="bg-white/60 border-y border-[#0c1410]/10">
+            <div class="max-w-5xl mx-auto px-6 py-24">
+                <p class="reveal text-xs font-semibold uppercase tracking-[0.2em] text-[#0a6b4a] mb-3">Formación</p>
+                <h2 class="reveal font-display font-bold text-3xl tracking-tight mb-10">Cómo me formo</h2>
+                <div class="reveal border-l-2 border-[#0f9d6c]/30 pl-6 space-y-8">
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-[#0f9d6c] ring-4 ring-[#f7f5f0]"></span>
+                        <h3 class="font-display font-semibold text-lg">Ingeniería de software</h3>
+                        <p class="text-[#0c1410]/65 text-sm mt-1">Fortaleciendo bases en código limpio, bases de datos y arquitectura. <span class="italic">(Edita esto con tu institución y fechas reales.)</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="max-w-5xl mx-auto px-6 py-24">
+            <div class="reveal rounded-3xl bg-[#0c1410] text-[#f7f5f0] p-10 sm:p-14 text-center">
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight">¿Tienes una tienda que mejorar?</h2>
+                <p class="mt-4 text-[#f7f5f0]/65 max-w-xl mx-auto text-lg">Cuéntame qué quieres lograr con tu e-commerce. Te respondo con una idea clara de cómo abordarlo.</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-3">
+                    <a href="mailto:werner.sebald.c@gmail.com" class="px-6 py-3 rounded-lg bg-[#0f9d6c] text-white font-semibold hover:bg-[#0a6b4a] transition"><i class="fa-solid fa-envelope mr-2"></i>Escríbeme</a>
+                    <a href="https://www.linkedin.com/in/werner-sebald-cortez-50195a221/" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg border border-white/20 font-semibold hover:border-[#0f9d6c] transition"><i class="fa-brands fa-linkedin mr-2"></i>LinkedIn</a>
+                    <a href="https://github.com/SrSebald" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg border border-white/20 font-semibold hover:border-[#0f9d6c] transition"><i class="fa-brands fa-github mr-2"></i>GitHub</a>
+                    <a href="https://www.hackerrank.com/profile/werner_sebald_c" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg border border-white/20 font-semibold hover:border-[#0f9d6c] transition"><i class="fa-brands fa-hackerrank mr-2"></i>HackerRank</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-     &copy;  2026 Werner Sebald  
+    <footer class="border-t border-[#0c1410]/10">
+        <div class="max-w-5xl mx-auto px-6 py-8 text-sm text-[#0c1410]/50 flex flex-col sm:flex-row justify-between gap-2">
+            <span>&copy; 2026 Werner Sebald C. Todos los derechos reservados.</span>
+            <span>Desarrollo para e-commerce · Shopify · Mercado Libre</span>
+        </div>
     </footer>
 
-    
+    <script>
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
 </body>
 </html>

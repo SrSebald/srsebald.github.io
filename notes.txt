@@ -1,0 +1,6 @@
+Strcuture of my portafolio 
+1. Header 
+    * About me 
+    * Educaction
+    * Experience
+    * Contact
